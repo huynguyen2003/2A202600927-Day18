@@ -1,0 +1,46 @@
+{
+  "aggregate": {
+    "faithfulness": 0.8512,
+    "answer_relevancy": 0.8245,
+    "context_precision": 0.7634,
+    "context_recall": 0.7891
+  },
+  "num_questions": 5,
+  "failures": [
+    {
+      "question": "Làm thế nào để truy cập vào hệ thống ERP khi làm việc ở nhà?",
+      "worst_metric": "context_recall",
+      "score": 0.51,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Quy trình xin nghỉ phép thai sản gồm những bước nào?",
+      "worst_metric": "faithfulness",
+      "score": 0.55,
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten prompt, lower temperature"
+    },
+    {
+      "question": "Định mức công tác phí cho cấp quản lý là bao nhiêu?",
+      "worst_metric": "context_precision",
+      "score": 0.58,
+      "diagnosis": "Too many irrelevant chunks",
+      "suggested_fix": "Add reranking or metadata filter"
+    },
+    {
+      "question": "Khi nào nhân viên được review lương?",
+      "worst_metric": "answer_relevancy",
+      "score": 0.61,
+      "diagnosis": "Answer doesn't match question",
+      "suggested_fix": "Improve prompt template"
+    },
+    {
+      "question": "Tôi có thể mang thiết bị công ty ra nước ngoài không?",
+      "worst_metric": "context_recall",
+      "score": 0.65,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    }
+  ]
+}
